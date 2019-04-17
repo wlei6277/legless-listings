@@ -9,11 +9,16 @@ class ListingsController < ApplicationController
     end
 
     def new
-    
+        @listing = Listing.new
+        @breeds = Breed.all
+        @sexes = Listing.sexes.keys
     end
     
     def create
-    
+        a = 1
+        byebug
+        a += 2
+        byebug
     end
 
     def edit
@@ -27,6 +32,8 @@ class ListingsController < ApplicationController
     def destroy
         
     end
+
+    private
     
     def set_listing
         id = params[:id]
