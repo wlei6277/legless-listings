@@ -3,7 +3,7 @@ class ListingsController < ApplicationController
     before_action :set_breeds_and_sexes, only: [:new, :edit]
 
     def index
-    
+        @listings = Listing.all
     end
 
     def show
